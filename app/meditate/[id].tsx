@@ -18,12 +18,11 @@ const Meditate = () => {
   useEffect(() => {
     let timerId: NodeJS.Timeout;
 
-    // Exit
-    if (isMeditating && secondsRemaining > 0){
+    if (isMeditating && secondsRemaining > 0) {
       timerId = setTimeout(() => {
         setSecondsRemaining((prev) => prev - 1);
       }, 1000);
-    }else if (secondsRemaining === 0) {
+    } else if (secondsRemaining === 0) {
       setIsMeditating(false);
     }
 
